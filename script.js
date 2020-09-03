@@ -74,53 +74,53 @@
 // }
 // console.log(obj);
 
-function Employed(salary) {
-    this.level = 1;
-    this.salary = salary;
+// function Employed(salary) {
+//     this.level = 1;
+//     this.salary = salary;
 
-    // this.__proto__ = {
-    //     method: function(){
-    //         console.log(this.salary);
-    //     },
-    // };
-}
+//     // this.__proto__ = {
+//     //     method: function(){
+//     //         console.log(this.salary);
+//     //     },
+//     // };
+// }
 
-Employed.prototype.upgrade = function () {
-    console.log(this.salary);
-    this.salary = this.salary = this.salary + this.salary * (this.level++ / 10);
-};
-
-function Manager() {
-    Employed.call(this, 500);
-}
-
-Manager.prototype = Object.create(Employed.prototype);
-// Manager.prototype.estimate = function () {
-//     console.log('estimation...');
+// Employed.prototype.upgrade = function () {
+//     console.log(this.salary);
+//     this.salary = this.salary = this.salary + this.salary * (this.level++ / 10);
 // };
-Manager.prototype.constructor = Manager;
 
-Developer.prototype = Object.create(Employed.prototype);
-Developer.prototype.constructor = Developer;
+// function Manager() {
+//     Employed.call(this, 500);
+// }
 
-function Developer() {
-    Employed.call(this, 1000);
-}
+// Manager.prototype = Object.create(Employed.prototype);
+// // Manager.prototype.estimate = function () {
+// //     console.log('estimation...');
+// // };
+// Manager.prototype.constructor = Manager;
 
-const a = new Manager();
-const b = new Developer();
-a.upgrade();
-a.upgrade();
-a.upgrade();
-a.upgrade();
-a.upgrade();
-a.upgrade();
-console.log(a);
+// Developer.prototype = Object.create(Employed.prototype);
+// Developer.prototype.constructor = Developer;
 
-b.upgrade();
-b.upgrade();
-b.upgrade();
-b.upgrade();
-b.upgrade();
-b.upgrade();
-console.log(b);
+// function Developer() {
+//     Employed.call(this, 1000);
+// }
+
+// const a = new Manager();
+// const b = new Developer();
+// a.upgrade();
+// a.upgrade();
+// a.upgrade();
+// a.upgrade();
+// a.upgrade();
+// a.upgrade();
+// console.log(a);
+
+// b.upgrade();
+// b.upgrade();
+// b.upgrade();
+// b.upgrade();
+// b.upgrade();
+// b.upgrade();
+// console.log(b);
